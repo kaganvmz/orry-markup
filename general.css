@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'ZenKakuGothicNew';
+    font-weight: 400;
+    src: url(fonts/ZenKakuGothicNew-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ZenKakuGothicNew';
+    font-weight: 700;
+    src: url(fonts/ZenKakuGothicNew-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ZenKakuGothicNew';
+    font-weight: 900;
+    src: url(fonts/ZenKakuGothicNew-Black.ttf) format('truetype');
+}
+
+/*colors*/
+:root {
+    --white: #ffffff;
+    --white-background: #f5f5f5;
+    --black: #1f2021;
+    --grey-primary: #f4f3f4;
+    --grey: #b0b0b0;
+    --grey-dark: #ebebeb;
+    --green: #00c673;
+    --modal-priority: 5;
+    --language-dropdown-priority: 2;
+    --menu-priority: 10;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+    font-family: 'ZenKakuGothicNew';
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+button.btn-main {
+    background-color: var(--grey-primary);
+    border-radius: 12px;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+button.btn-main__active {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.price {
+    background-color: var(--grey-dark);
+    color: var(--black);
+    border-radius: 40px;
+    padding: 10px 16px;
+}
+
+.price__green {
+    background-color: var(--green);
+    color: var(--white);
+}
