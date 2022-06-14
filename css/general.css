@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'ZenKakuGothicNew';
     font-weight: 400;
-    src: url(fonts/ZenKakuGothicNew-Regular.ttf) format('truetype');
+    src: url(../fonts/ZenKakuGothicNew-Regular.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'ZenKakuGothicNew';
     font-weight: 700;
-    src: url(fonts/ZenKakuGothicNew-Bold.ttf) format('truetype');
+    src: url(../fonts/ZenKakuGothicNew-Bold.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'ZenKakuGothicNew';
     font-weight: 900;
-    src: url(fonts/ZenKakuGothicNew-Black.ttf) format('truetype');
+    src: url(../fonts/ZenKakuGothicNew-Black.ttf) format('truetype');
 }
 
 /*colors*/
