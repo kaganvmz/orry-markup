@@ -3,12 +3,6 @@
 }
 
 .header__background {
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*right: 0;*/
-    /*left: 0;*/
-    /*bottom: 0;*/
-    /*z-index: -1;*/
     height: 100%;
     width: 100%;
 }
@@ -46,15 +40,18 @@
 }
 
 .burger-menu .menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: var(--menu-priority);
     display: none;
+    max-width: 480px;
     width: 100%;
     height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
     background-color: var(--white-background);
 }
 
@@ -88,6 +85,11 @@
     position: absolute;
     top: 26px;
     right: 16px;
+}
+
+.menu .menu__btn-close .feather-x {
+    width: 36px;
+    height: 36px;
 }
 
 .lang__toggle,

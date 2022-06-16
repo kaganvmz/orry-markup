@@ -1,3 +1,4 @@
+const pageBody = document.querySelector('body');
 const langToggle = document.getElementById('lang__toggle');
 const langToggleIcon = document.querySelector('.lang__toggle__icon');
 const langToggleIconUp = document.querySelector('.lang__toggle__icon--up');
@@ -36,12 +37,13 @@ const openMenu = () => {
     const menu = document.getElementById('menu');
     const menuOpenedClass = 'menu--opened';
     menu.classList.add(menuOpenedClass);
-
+    pageBody.style.overflow = 'hidden';
     const closeMenuBtn = document.getElementById('menu__btn-close');
     const menuItemList = document.querySelectorAll('.menu__item_link');
 
     closeMenuBtn.addEventListener('click', () => {
         menu.classList.remove(menuOpenedClass);
+        pageBody.style.overflow = 'auto';
     });
 
     menuItemList.forEach((menuItem) => {

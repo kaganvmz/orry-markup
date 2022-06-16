@@ -34,7 +34,7 @@
     --header-priority: 8;
     --modal-priority: 5;
     --language-dropdown-priority: 4;
-    --menu-priority: 10;
+    --menu-priority: 11;
     --sticky-categories-priority: 3;
 }
 
@@ -45,7 +45,7 @@
     color: var(--black);
     margin: 0;
     padding: 0;
-    font-family: 'ZenKakuGothicNew';
+    font-family: 'ZenKakuGothicNew', sans-serif;
 }
 
 ul[class],
