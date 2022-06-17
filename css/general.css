@@ -6,6 +6,12 @@
 
 @font-face {
     font-family: 'ZenKakuGothicNew';
+    font-weight: 500;
+    src: url(../fonts/ZenKakuGothicNew-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ZenKakuGothicNew';
     font-weight: 700;
     src: url(../fonts/ZenKakuGothicNew-Bold.ttf) format('truetype');
 }
@@ -23,11 +29,13 @@
     --black: #1f2021;
     --grey-primary: #f4f3f4;
     --grey: #b0b0b0;
-    --grey-dark: #ebebeb;
+    --grey-light: #ebebeb;
     --green: #00c673;
+    --header-priority: 8;
     --modal-priority: 5;
-    --language-dropdown-priority: 2;
-    --menu-priority: 10;
+    --language-dropdown-priority: 4;
+    --menu-priority: 11;
+    --sticky-categories-priority: 3;
 }
 
 *,
@@ -37,7 +45,7 @@
     color: var(--black);
     margin: 0;
     padding: 0;
-    font-family: 'ZenKakuGothicNew';
+    font-family: 'ZenKakuGothicNew', sans-serif;
 }
 
 ul[class],
@@ -71,6 +79,11 @@ a {
     text-decoration: none;
 }
 
+p {
+    padding: 0;
+    margin: 0;
+}
+
 button {
     outline: none;
     border: none;
@@ -90,13 +103,26 @@ button.btn-main__active {
 }
 
 .price {
-    background-color: var(--grey-dark);
+    background-color: var(--grey-light);
     color: var(--black);
     border-radius: 40px;
     padding: 10px 16px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
 }
 
-.price__green {
+.price--green {
     background-color: var(--green);
     color: var(--white);
+}
+
+.landing {
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: var(--white);
 }
