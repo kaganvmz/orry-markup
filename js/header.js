@@ -53,6 +53,19 @@ const openMenu = () => {
     });
 };
 
+const headerChildrenAlignment = () => {
+    const header = document.querySelector('.header');
+    const logoClassName = 'logo';
+
+    const isLogoPresent = Array.from(header.children).some(({ classList }) => {
+        return classList.contains(logoClassName);
+    });
+
+    header.style.justifyContent = isLogoPresent ? 'space-between' : 'flex-end';
+};
+
+headerChildrenAlignment();
+
 langToggle.addEventListener('click', toggleLanguage);
 burgerMenu.addEventListener('click', openMenu);
 

@@ -81,35 +81,23 @@ const dishExpandInfo = () => {
     const dishList = document.querySelectorAll('.dish');
 
     dishList.forEach((dish) => {
-        const dishId = dish.id;
+        dish.addEventListener('click', () => {
+            const dishExpandedList = document.querySelectorAll('.dish__list .dish--expand');
 
-        dish.addEventListener('click', (e) => {
-            const expandedDish = document.querySelector('.dish--expandable--open');
-            const dishExpandable = document.getElementById(`${dishId}-expandable`);
+            dish.classList.toggle('dish--expand');
 
-            if (expandedDish && expandedDish.id !== `${dishId}-expandable`) {
-                expandedDish.classList.remove('dish--expandable--open');
-                expandedDish.style.height = '0';
+            if (dishExpandedList.length) {
+                dishExpandedList[0].classList.remove('dish--expand');
             }
-
-            animateDishInfoExpandable(dishExpandable);
         });
     });
-};
-
-const animateDishInfoExpandable = (dishExpandable) => {
-    dishExpandable.style.height = dishExpandable.scrollHeight + 'px';
-    dishExpandable.classList.toggle('dish--expandable--open');
-    dishExpandable.style.height = dishExpandable.classList.contains('dish--expandable--open')
-        ? dishExpandable.scrollHeight + 'px'
-        : '0';
 };
 
 const selectCategory = () => {
     const categoryList = document.querySelectorAll('.category');
     const categoryActiveClass = 'category--active';
 
-    categoryList.forEach((category, categoryOrder) => {
+    categoryList.forEach((category) => {
         category.addEventListener('click', (e) => {
             const { target } = e;
             moveCategoryItemIntoView(target);
