@@ -1,5 +1,4 @@
 const categoriesSticky = document.querySelector('.categories__wrap');
-const specialMenuSlides = document.querySelectorAll('.landing .swiper--menu__slide');
 
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
@@ -53,14 +52,13 @@ const specialProposalPaginationPosition = () => {
 };
 
 const openSpecialMenu = () => {
-    specialMenuSlides.forEach((slide) => {
-        slide.addEventListener('click', () => {
-            specialMenu();
-            specialProposalPaginationPosition();
-            setTimeout(() => {
-                menuSliderPaginationWidth('slider');
-            }, 100);
+    swiper.on('click', (event) => {
+        specialProposalSlider.on('paginationRender', () => {
+            menuSliderPaginationWidth('slider');
         });
+        specialProposalSlider.slideTo(event.activeIndex);
+        specialMenu();
+        specialProposalPaginationPosition();
     });
 };
 
