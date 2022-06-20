@@ -12,7 +12,7 @@ const swiper = new Swiper('.swiper', {
 const specialProposalSlider = new Swiper('.slider', {
     direction: 'horizontal',
     loop: true,
-    spaceBetween: 16,
+    spaceBetween: 20,
     pagination: {
         el: '.slider-pagination'
     }
@@ -76,7 +76,7 @@ const dishNameRemoveEllipsis = () => {
 };
 
 const dishExpandInfo = () => {
-    const dishList = document.querySelectorAll('.dish');
+    const dishList = document.querySelectorAll('.dish__list .dish');
 
     dishList.forEach((dish) => {
         dish.addEventListener('click', () => {
