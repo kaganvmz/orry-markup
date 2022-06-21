@@ -14,7 +14,7 @@
     pointer-events: none;
 }
 
-.landing .footer {
+.landing .btn-main__wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@
     padding: 0 16px;
 }
 
-.landing .footer .btn-main {
+.btn-main__wrapper .btn-main {
     padding: 20px 0;
     max-width: 382px;
     width: 100%;

@@ -30,6 +30,7 @@
     --grey-primary: #f4f3f4;
     --grey: #b0b0b0;
     --grey-light: #ebebeb;
+    --grey-dark: #999999;
     --green: #00c673;
     --header-priority: 8;
     --modal-priority: 5;
@@ -68,6 +69,10 @@ blockquote,
 dl,
 dd {
     margin: 0;
+}
+
+body {
+    height: 100vh;
 }
 
 ul[class],
@@ -121,6 +126,8 @@ button.btn-main__active {
 
 .landing {
     position: relative;
+    display: flex;
+    flex-direction: column;
     max-width: 480px;
     width: 100%;
     height: 100%;

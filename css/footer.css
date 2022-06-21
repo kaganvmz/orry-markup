@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    gap: 12px;
+    padding: 24px 10px;
+    background-color: var(--grey-primary);
+}
+
+.footer__text {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--grey-dark);
+    padding-bottom: 2px;
+}

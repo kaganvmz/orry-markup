@@ -183,10 +183,6 @@
     min-height: 116px;
 }
 
-.dish:not(.dish--expand) .dish__img {
-    margin-top: 4px;
-}
-
 .dish .dish__img img {
     border-radius: 12px;
     object-fit: cover;
@@ -282,7 +278,7 @@
     height: 100vh;
     margin: 0 auto;
     overflow-x: hidden;
-    background-color: var(--white-background);
+    background-color: var(--white);
 }
 
 .special-menu.special-menu--opened {
@@ -320,4 +316,5 @@
 .slider .dish {
     gap: 0;
     padding: 0;
+    border: none;
 }
