@@ -130,7 +130,7 @@
 }
 
 .category {
-    padding: 10px 16px;
+    padding: 9px 16px 11px;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -181,6 +181,10 @@
     max-width: 40%;
     min-width: 40%;
     min-height: 116px;
+}
+
+.dish:not(.dish--expand) .dish__img {
+    margin-top: 4px;
 }
 
 .dish .dish__img img {
