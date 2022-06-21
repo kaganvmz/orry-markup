@@ -146,6 +146,10 @@
     color: var(--white);
 }
 
+.main {
+    margin-bottom: 82px;
+}
+
 .menu {
     padding: 0 16px;
 }
