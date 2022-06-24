@@ -1,8 +1,15 @@
 .header__wrap {
-    height: 410px;
+    position: relative;
+    padding-top: 100%;
+    width: 100%;
 }
 
 .header__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     height: 100%;
     width: 100%;
 }
@@ -30,6 +37,7 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
+    margin-top: -1px;
 }
 
 .header__navigation--grey .burger-menu__icon,
@@ -46,12 +54,19 @@
     left: 0;
     z-index: var(--menu-priority);
     display: none;
-    max-width: 480px;
+    max-width: 428px;
     width: 100%;
     height: 100vh;
     margin: 0 auto;
     overflow: hidden;
     background-color: var(--white-background);
+}
+
+.burger-menu .burger-menu__line {
+    width: 22px;
+    height: 2px;
+    background: var(--black);
+    border-radius: 10px;
 }
 
 .menu.menu--opened {
@@ -60,7 +75,7 @@
 
 .menu .menu__content {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, 50%);
 }
@@ -77,7 +92,7 @@
 }
 
 .menu .menu__item:not(:last-child) {
-    padding-bottom: 50px;
+    padding-bottom: 48px;
 }
 
 .menu .menu__item_link {
@@ -88,15 +103,15 @@
     padding-bottom: 2px;
 }
 
+.menu .menu__item_icon {
+    width: 28px;
+    height: 28px;
+}
+
 .menu .menu__btn-close {
     position: absolute;
     top: 26px;
     right: 16px;
-}
-
-.menu .menu__btn-close .feather-x {
-    width: 36px;
-    height: 36px;
 }
 
 .lang__toggle,
@@ -111,9 +126,15 @@
 }
 
 .lang__toggle {
-    padding: 13px 12px 11px 16px;
+    padding-left: 8px;
+    padding-bottom: 2px;
+    max-width: 70px;
+    width: 70px;
+    height: 48px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 2px;
 }
 
 .lang__toggle .lang__toggle__name {
@@ -121,7 +142,6 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    padding-top: 1px;
 }
 
 .lang__toggle .lang__toggle__icon--closed {
@@ -136,7 +156,7 @@
     display: none;
     position: absolute;
     right: 0;
-    top: 56px;
+    top: 54px;
     padding: 28px 20px;
     z-index: var(--language-dropdown-priority);
     box-shadow: 0 0 34px rgba(0, 0, 0, 0.25);
@@ -158,14 +178,22 @@
     padding-bottom: 24px;
 }
 
-.burger-menu__icon,
 .menu__btn-close {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 48px;
     height: 48px;
-    padding-top: 3px;
+}
+
+.burger-menu__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    gap: 6px;
 }
 
 .burger-menu__icon .feather-menu {

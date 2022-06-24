@@ -84,6 +84,10 @@ a {
     text-decoration: none;
 }
 
+a:focus-visible {
+    outline: none;
+}
+
 p {
     padding: 0;
     margin: 0;
@@ -128,7 +132,7 @@ button.btn-main__active {
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 480px;
+    max-width: 428px;
     width: 100%;
     height: 100%;
     margin: 0 auto;

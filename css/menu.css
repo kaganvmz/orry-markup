@@ -7,7 +7,7 @@
     max-width: 264px;
     width: 100%;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 42px 0 36px
 }
 
 .service-info__icon svg {
@@ -45,19 +45,34 @@
     border: none;
     border-radius: 12px;
     outline: none;
-    padding: 50px 24px 24px;
-    max-width: 342px;
+    padding: 40px 24px 24px;
+    max-width: 382px;
     width: 100%;
     text-align: center;
 }
 
+.modal__header__icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
 .modal__header__icon svg {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
+}
+
+.modal__header__icon--wifi svg {
+    width: 60px;
+    height: 60px;
+    stroke-width: 1.5;
 }
 
 .modal__header__title {
-    padding-top: 18px;
+    padding-top: 8px;
     font-style: normal;
     font-weight: 900;
     font-size: 26px;
@@ -65,7 +80,7 @@
 }
 
 .modal__content {
-    padding: 56px 0;
+    padding: 56px 0 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +96,7 @@
     font-weight: 900;
     font-size: 18px;
     line-height: 22px;
-    padding-bottom: 14px;
+    padding-bottom: 12px;
 }
 
 .modal__content__description {
@@ -97,6 +112,7 @@
 }
 
 .modal__content .btn-copy {
+    margin: 0 auto;
     width: 40px;
     height: 40px;
     border-radius: 8px;
@@ -106,9 +122,16 @@
     background-color: var(--grey-primary);
 }
 
+.modal__content .btn-copy svg {
+    width: 20px;
+    height: 20px;
+}
+
 .modal__content .btn-copied {
-    max-width: 140px;
-    width: 100%;
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 12px;
     padding: 14px 20px;
     background-color: var(--white);
@@ -126,7 +149,9 @@
 }
 
 .modal__content__action {
-    padding-top: 28px;
+    position: relative;
+    width: 100%;
+    padding-top: 32px;
 }
 
 .modal__footer .btn-main {
@@ -176,5 +201,11 @@
     }
     100% {
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .modal {
+        max-width: 342px;
     }
 }

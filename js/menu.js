@@ -23,9 +23,11 @@ const setLocationModalContent = () => {
 
     copyBtn.addEventListener('click', () => {
         const locationInfo = 'вулиця Григорія Сковороди, 7 Київ, Україна';
-        copyBtn.classList.add('btn-copy--hidden');
         btnCopied.classList.remove('btn-copied--hidden');
 
+        setTimeout(() => {
+            btnCopied.classList.add('btn-copied--hidden');
+        }, 3000)
         navigator.clipboard.writeText(locationInfo);
     });
 };
@@ -33,13 +35,11 @@ const setLocationModalContent = () => {
 const resetModalContent = () => {
     const modalContentWrapper = document.getElementById(`modal-${modal.contentKey}`);
     const modalContentClass = `modal--${modal.contentKey}`;
-    const copyBtn = document.getElementById('btn-copy');
     const btnCopied = document.getElementById('btn-copied');
 
     modalContentWrapper.classList.add(modalContentClass);
 
     if (modal.contentKey === 'map-pin') {
-        copyBtn.classList.remove('btn-copy--hidden');
         btnCopied.classList.add('btn-copied--hidden');
     }
 };
