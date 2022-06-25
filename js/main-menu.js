@@ -47,8 +47,9 @@ const specialProposalPaginationPosition = () => {
     const sliderImg = document.querySelector('.slider .dish__img');
     const sliderPagination = document.querySelector('.slider-pagination');
     const { height } = sliderImg.getBoundingClientRect();
+    const lMarginFromSlides = 28;
 
-    sliderPagination.style.top = height + 16 + 'px';
+    sliderPagination.style.top = height + lMarginFromSlides + 'px';
 };
 
 const openSpecialMenu = () => {
@@ -62,7 +63,7 @@ const openSpecialMenu = () => {
     });
 };
 
-const dishNameRemoveEllipsis = () => {
+const dishNameEllipsis = () => {
     const dishNameList = document.querySelectorAll('.dish__name');
 
     dishNameList.forEach((dishName) => {
@@ -70,7 +71,11 @@ const dishNameRemoveEllipsis = () => {
         const maxCharInContent = 60;
 
         if (elementContent.length >= maxCharInContent) {
-            dishName.textContent = `${elementContent.substring(0, maxCharInContent)}...`;
+            const partToShow = elementContent.substring(0, maxCharInContent);
+            const partToHide = elementContent.substring(maxCharInContent, elementContent.length);
+            const overflowPart = `<span class="dish__name--overflow">${partToHide}</span>`;
+            const ellipsis = `<span class="dish__name__ellipsis dish__name__ellipsis--show">...</span>`;
+            dishName.innerHTML = `${partToShow}${overflowPart}${ellipsis}`;
         }
     });
 };
@@ -141,7 +146,7 @@ const stickyCategoriesBoxShadow = () => {
     categoriesSticky.style.boxShadow = top === 0 ? customBoxShadow : 'none';
 };
 
-dishNameRemoveEllipsis();
+dishNameEllipsis();
 menuSliderPaginationWidth('swiper__wrap');
 dishExpandInfo();
 selectCategory();

@@ -39,11 +39,13 @@
                         </div>
                         <div class="burger-menu">
                             <div class="burger-menu__icon" id="burger-menu__icon">
-                                <i data-feather="menu"></i>
+                                <div class="burger-menu__line"></div>
+                                <div class="burger-menu__line"></div>
+                                <div class="burger-menu__line"></div>
                             </div>
                             <div class="menu" id="menu">
                                 <div class="menu__btn-close" id="menu__btn-close">
-                                    <i data-feather="x"></i>
+                                    <img src="./images/btn_close.svg" alt="Close button">
                                 </div>
                                 <div class="menu__content">
                                     <div class="menu__item">
@@ -82,7 +84,7 @@
                         </div>
                         <div class="swiper-slide swiper--menu__slide" id="swiper--menu__slide-2">
                             <div class="slide__img">
-                                <img src="./images/salad.jpg" alt="Special Proposition Image" />
+                                <img src="./images/meat.jpg" alt="Special Proposition Image" />
                             </div>
                             <div class="slide__info">
                                 <p class="slide__name">Салат з помідорами, куркою, огірком та капустою</p>
@@ -129,13 +131,13 @@
                         <h3 class="menu__category__name">Snidanok</h3>
                         <div class="dish__list">
                             <div class="dish" id="dish-1">
-                                <div class="dish__img">
-                                    <img src="./images/meat.jpg" alt="Dish Image" />
+                                <div class="dish__img__wrapper">
+                                    <div class="dish__img">
+                                        <img src="./images/meat.jpg" alt="Dish Image" />
+                                    </div>
                                 </div>
                                 <div class="dish__info">
-                                    <p class="dish__name"
-                                        >Круасан з лівером(печінка), вишнею і грибамию Не дуже свіжийі
-                                    </p>
+                                    <p class="dish__name">Круасан з апельсином та яблочно - вишневим мармеладом мармеладом мармеладом</p>
                                     <p class="dish__description">
                                         Круаса́н — традиційний для французької та австрійської кухонь невеликий
                                         хлібо-булочний кондитерський виріб із листкового тіста у формі півмісяця з
@@ -152,11 +154,13 @@
                                 </div>
                             </div>
                             <div class="dish" id="dish-2">
-                                <div class="dish__img">
-                                    <img src="./images/meat.jpg" alt="Dish Image" />
+                                <div class="dish__img__wrapper">
+                                    <div class="dish__img">
+                                        <img src="./images/meat.jpg" alt="Dish Image" />
+                                    </div>
                                 </div>
                                 <div class="dish__info">
-                                    <p class="dish__name">Круасан з апельсином </p>
+                                    <p class="dish__name">Круасан з апельсином</p>
                                     <p class="dish__description">
                                         Круаса́н — традиційний для французької та австрійської кухонь невеликий
                                         хлібо-булочний кондитерський виріб із листкового тіста у формі півмісяця з
@@ -192,8 +196,10 @@
                         <h3 class="menu__category__name">Випічка</h3>
                         <div class="dish__list">
                             <div class="dish">
-                                <div class="dish__img">
-                                    <img src="./images/meat.jpg" alt="Dish Image" />
+                                <div class="dish__img__wrapper">
+                                    <div class="dish__img">
+                                        <img src="./images/meat.jpg" alt="Dish Image" />
+                                    </div>
                                 </div>
                                 <div class="dish__info">
                                     <p class="dish__name">Круасан мармеладом </p>
@@ -211,11 +217,19 @@
                                 </div>
                             </div>
                             <div class="dish">
-                                <div class="dish__img">
-                                    <img src="./images/meat.jpg" alt="Dish Image" />
+                                <div class="dish__img__wrapper">
+                                    <div class="dish__img">
+                                        <img src="./images/meat.jpg" alt="Dish Image" />
+                                    </div>
                                 </div>
                                 <div class="dish__info">
                                     <p class="dish__name">Круасан з апельсином </p>
+                                    <p class="dish__description">
+                                        Круаса́н — традиційний для французької та австрійської кухонь невеликий
+                                        хлібо-булочний кондитерський виріб із листкового тіста у формі півмісяця з
+                                        начинкою або без. Свого роду традиційний для України виріб під назвою рогалик,
+                                        але той зазвичай не готується з листкового тіста і може бути більш загнутим
+                                    </p>
                                     <div class="dish__info__specification">
                                         <div class="dish__price price">100 $</div>
                                         <span class="dish__weight">100 г</span>
@@ -238,15 +252,36 @@
             <div class="special-menu__header">
                 <h2 class="special-menu__title">Спеціальні пропозиції</h2>
                 <div class="special-menu__btn-close" id="special-menu__btn-close">
-                    <i data-feather="x"></i>
+                    <img src="./images/btn_close.svg" alt="Close button">
                 </div>
             </div>
             <div class="swiper__wrap">
                 <div class="slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide dish dish--expand">
-                            <div class="dish__img">
-                                <img src="./images/meat.jpg" alt="Dish Image" />
+                            <div class="dish__img__wrapper">
+                                <div class="dish__img">
+                                    <img src="./images/meat.jpg" alt="Dish Image" />
+                                </div>
+                            </div>
+                            <div class="dish__info">
+                                <p class="dish__name">Круасан з апельсином</p>
+                                <p class="dish__description">
+                                    Круаса́н — традиційний для французької та австрійської кухонь невеликий
+                                    хлібо-булочний кондитерський виріб із листкового тіс
+                                </p>
+                                <div class="dish__info__specification">
+                                    <div class="dish__price price price--green">12345 $</div>
+                                    <span class="dish__weight">100 г</span>
+                                    <span class="dish__calorie">325 Ккал.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide dish dish--expand">
+                            <div class="dish__img__wrapper">
+                                <div class="dish__img">
+                                    <img src="./images/meat.jpg" alt="Dish Image" />
+                                </div>
                             </div>
                             <div class="dish__info">
                                 <p class="dish__name">Круасан з апельсином</p>
@@ -264,8 +299,10 @@
                             </div>
                         </div>
                         <div class="swiper-slide dish dish--expand">
-                            <div class="dish__img">
-                                <img src="./images/meat.jpg" alt="Dish Image" />
+                            <div class="dish__img__wrapper">
+                                <div class="dish__img">
+                                    <img src="./images/meat.jpg" alt="Dish Image" />
+                                </div>
                             </div>
                             <div class="dish__info">
                                 <p class="dish__name">Круасан з апельсином</p>
@@ -283,27 +320,10 @@
                             </div>
                         </div>
                         <div class="swiper-slide dish dish--expand">
-                            <div class="dish__img">
-                                <img src="./images/meat.jpg" alt="Dish Image" />
-                            </div>
-                            <div class="dish__info">
-                                <p class="dish__name">Круасан з апельсином</p>
-                                <p class="dish__description">
-                                    Круаса́н — традиційний для французької та австрійської кухонь невеликий
-                                    хлібо-булочний кондитерський виріб із листкового тіста у формі півмісяця з начинкою
-                                    або без. Свого роду традиційний для України виріб під назвою рогалик, але той
-                                    зазвичай не готується з листкового тіста і може бути більш загнутим
-                                </p>
-                                <div class="dish__info__specification">
-                                    <div class="dish__price price price--green">12345 $</div>
-                                    <span class="dish__weight">100 г</span>
-                                    <span class="dish__calorie">325 Ккал.</span>
+                            <div class="dish__img__wrapper">
+                                <div class="dish__img">
+                                    <img src="./images/meat.jpg" alt="Dish Image" />
                                 </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide dish dish--expand">
-                            <div class="dish__img">
-                                <img src="./images/meat.jpg" alt="Dish Image" />
                             </div>
                             <div class="dish__info">
                                 <p class="dish__name">Круасан з апельсином</p>

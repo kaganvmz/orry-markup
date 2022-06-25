@@ -41,8 +41,8 @@
 }
 
 .header__navigation--grey .burger-menu__icon,
-.lang .lang__toggle,
-.lang .lang__dropdown {
+.header__navigation--grey .lang .lang__toggle,
+.header__navigation--grey .lang .lang__dropdown {
     background-color: var(--grey-primary);
 }
 

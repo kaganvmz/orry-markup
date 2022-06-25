@@ -1,6 +1,6 @@
 .swiper__wrap {
     position: relative;
-    padding: 0 16px 22px 16px;
+    padding: 0 16px 24px 16px;
     width: 100%;
 }
 
@@ -9,11 +9,11 @@
     z-index: 1;
     bottom: 0;
     width: 100%;
+    display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 .swiper__wrap .swiper-pagination-bullet {
-    flex-grow: 1;
     height: 4px;
     border-radius: 10px;
     opacity: 1;
@@ -32,10 +32,6 @@
     background-color: var(--black);
 }
 
-.slider .dish--expand .dish__img {
-    margin-bottom: 60px;
-}
-
 .slider {
     position: relative;
 }
@@ -44,18 +40,25 @@
     position: absolute;
     z-index: 1;
     width: 100%;
+    display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 
 .swiper--menu {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .swiper--menu .swiper-slide {
-    width: 100%;
+    position: relative;
     border-radius: 12px;
+    padding-top: 73.5%;
+    width: 100%;
     background-color: var(--white-background);
+}
+
+.swiper-slide .slide__img__wrapper {
+    position: relative;
 }
 
 .swiper--menu .slide__info {
@@ -74,7 +77,14 @@
 }
 
 .swiper--menu .slide__img {
-    height: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
 
 .swiper--menu .slide__img img {
@@ -98,7 +108,7 @@
 }
 
 .header__wrapper {
-    margin-bottom: 40px;
+    margin-bottom: 14px;
 }
 
 .header {
@@ -166,25 +176,17 @@
 }
 
 .dish__list {
-    margin-bottom: 6px;
+    margin-top: 6px;
 }
 
 .dish {
     display: flex;
-    gap: 18px;
-    padding: 30px 0;
+    gap: 20px;
+    padding: 32px 0;
 }
 
 .dish:not(:last-child) {
     border-bottom: 1px solid var(--grey-primary);
-}
-
-.dish .dish__img {
-    background-color: var(--grey-primary);
-    border-radius: 12px;
-    max-width: 40%;
-    min-width: 40%;
-    min-height: 116px;
 }
 
 .dish .dish__img img {
@@ -194,11 +196,47 @@
     height: 100%;
 }
 
+.dish .dish__img__wrapper {
+    position: relative;
+    padding-top: 29.3%;
+    height: inherit;
+    max-width: 39.3%;
+    min-width: 39.3%;
+    min-height: 112px;
+    width: 100%;
+}
+
+.dish .dish__img__wrapper .dish__img {
+    background-color: var(--grey-primary);
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .dish .dish__name {
+    position: relative;
+    top: -6px;
     font-style: normal;
     font-weight: 900;
     font-size: 16px;
     line-height: 22px;
+}
+
+.dish__name .dish__name--overflow {
+    display: none;
+}
+
+.dish__name .dish__name__ellipsis {
+    display: inline;
+}
+
+.dish__name .dish__name__ellipsis--show {
+    display: inline;
 }
 
 .dish .dish__description {
@@ -207,43 +245,12 @@
     display: none;
 }
 
-.dish--expand {
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.dish--expand .dish__name {
-    font-size: 20px;
-}
-
-.dish--expand .dish__img {
-    max-width: 100%;
-    width: 100%;
-}
-
-.dish--expand .dish__img img {
-    border-radius: 12px;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-}
-
-.dish--expand .dish__description {
-    padding-bottom: 12px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    height: auto;
-    display: block;
-}
-
 .dish .dish__info {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;
+    gap: 6px;
 }
 
 .dish__info .dish__info__specification {
@@ -254,7 +261,8 @@
 }
 
 .dish__info__specification .dish__weight {
-    margin: 0 8px 0 12px;
+    margin: 0 8px 0 16px;
+    padding-bottom: 4px;
     font-style: normal;
     font-weight: 400;
     text-align: center;
@@ -262,11 +270,50 @@
 }
 
 .dish__info__specification .dish__calorie {
+    padding-bottom: 4px;
     font-style: normal;
     font-weight: 500;
     text-align: center;
     color: var(--grey);
     white-space: nowrap;
+}
+
+.dish--expand {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.dish--expand .dish__img__wrapper {
+    padding-top: 73.5%;
+    max-width: 100%;
+    margin-bottom: 6px;
+}
+
+.dish--expand .dish__info {
+    gap: 12px;
+}
+
+.dish--expand .dish__name {
+    top: 0;
+    font-size: 20px;
+}
+
+.dish--expand .dish__name--overflow {
+    display: inline;
+}
+
+.dish--expand .dish__name__ellipsis {
+    display: none;
+}
+
+.dish--expand .dish__description {
+    padding-bottom: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    height: auto;
+    display: block;
 }
 
 .special-menu {
@@ -294,7 +341,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 26px 16px;
+    padding: 24px 16px;
 }
 
 .special-menu__header .special-menu__title {
@@ -312,13 +359,27 @@
     align-items: center;
 }
 
-.special-menu__btn-close .feather-x {
-    width: 36px;
-    height: 36px;
-}
-
 .slider .dish {
     gap: 0;
     padding: 0;
     border: none;
+}
+
+.slider .dish__img__wrapper {
+    position: relative;
+    padding-top: 73.5%;
+    height: inherit;
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+.slider .dish__img__wrapper .dish__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
