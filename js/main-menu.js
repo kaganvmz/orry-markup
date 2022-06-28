@@ -141,9 +141,9 @@ const moveCategoryItemIntoView = (currentCategoryItem) => {
 };
 
 const stickyCategoriesBoxShadow = () => {
+    const shadowOnClass = 'categories__wrap--shadow-on';
     const { top } = categoriesSticky.getBoundingClientRect();
-    const customBoxShadow = '0px 15px 10px -15px rgba(0, 0, 0, 0.25)';
-    categoriesSticky.style.boxShadow = top === 0 ? customBoxShadow : 'none';
+    top === 0 ? categoriesSticky.classList.add(shadowOnClass) : categoriesSticky.classList.remove(shadowOnClass)
 };
 
 dishNameEllipsis();

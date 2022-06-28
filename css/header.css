@@ -32,6 +32,11 @@
     padding: 26px 16px 0;
 }
 
+.header .logo {
+    position: relative;
+    top: -4px;
+}
+
 .header .header__navigation {
     display: flex;
     justify-content: center;

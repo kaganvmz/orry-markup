@@ -52,7 +52,7 @@
 .swiper--menu .swiper-slide {
     position: relative;
     border-radius: 12px;
-    padding-top: 73.5%;
+    padding-top: 74.7%;
     width: 100%;
     background-color: var(--white-background);
 }
@@ -121,17 +121,21 @@
     overflow: hidden;
     position: sticky;
     top: 0;
-    padding: 16px;
-    margin-bottom: 48px;
+    padding: 16px 0;
+    margin-bottom: 32px;
     z-index: var(--sticky-categories-priority);
     background-color: var(--white);
+}
+
+.categories__wrap--shadow-on {
+    box-shadow: 0 0 34px rgba(0, 0, 0, 0.25);
 }
 
 .categories {
     border-top: 2px solid #ffffff;
     background-color: var(--white);
     width: 100%;
-    padding-bottom: 48px;
+    padding: 0 16px 48px;
     white-space: nowrap;
     scroll-behavior: smooth;
     overflow-x: scroll;
@@ -157,7 +161,7 @@
 }
 
 .main {
-    margin-bottom: 82px;
+    margin-bottom: 86px;
 }
 
 .menu {
@@ -284,13 +288,13 @@
 }
 
 .dish--expand .dish__img__wrapper {
-    padding-top: 73.5%;
+    padding-top: 74.7%;
     max-width: 100%;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .dish--expand .dish__info {
-    gap: 12px;
+    gap: 16px;
 }
 
 .dish--expand .dish__name {
@@ -307,7 +311,7 @@
 }
 
 .dish--expand .dish__description {
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -349,6 +353,7 @@
     font-weight: 900;
     font-size: 26px;
     line-height: 22px;
+    padding-bottom: 4px;
 }
 
 .special-menu__header .special-menu__btn-close {
@@ -367,10 +372,10 @@
 
 .slider .dish__img__wrapper {
     position: relative;
-    padding-top: 73.5%;
+    padding-top: 74.7%;
     height: inherit;
     width: 100%;
-    margin-bottom: 64px;
+    margin-bottom: 68px;
 }
 
 .slider .dish__img__wrapper .dish__img {

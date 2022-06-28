@@ -46,6 +46,7 @@
     color: var(--black);
     margin: 0;
     padding: 0;
+    outline: none;
     font-family: 'ZenKakuGothicNew', sans-serif;
 }
 
@@ -94,6 +95,13 @@ p {
 }
 
 button {
+    outline: none;
+    border: none;
+}
+
+button:focus-visible,
+button:focus,
+button::-moz-focus-inner {
     outline: none;
     border: none;
 }
