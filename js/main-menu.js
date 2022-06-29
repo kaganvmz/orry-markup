@@ -108,15 +108,27 @@ const selectCategory = () => {
             if (!target.classList.contains(categoryActiveClass)) {
                 const previousSelectedCategory = document.querySelector(`.${categoryActiveClass}`);
                 const categoryId = target.dataset.category;
-                const categoryMenu = document.getElementById(categoryId);
 
                 previousSelectedCategory.classList.remove(categoryActiveClass);
                 target.classList.add(categoryActiveClass);
-                categoryMenu.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                scrollMenuToTop(categoryId);
             }
         });
     });
 };
+
+const scrollMenuToTop = (categoryId) => {
+    const categoryMenu = document.getElementById(categoryId);
+    const firstMenuCategory = 'breakfast';
+    const headerOffset = categoryId === firstMenuCategory ? 80 : 52;
+    const elementPosition = categoryMenu.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });
+}
 
 const moveCategoryItemIntoView = (currentCategoryItem) => {
     const categoriesParent = document.querySelector('.categories');
